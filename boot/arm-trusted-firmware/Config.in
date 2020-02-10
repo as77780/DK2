@@ -106,13 +106,6 @@ config BR2_TARGET_ARM_TRUSTED_FIRMWARE_ADDITIONAL_VARIABLES
 	  Additional parameters for the ATF build
 	  E.G. 'DEBUG=1 LOG_LEVEL=20'
 
-<<<<<<< HEAD
-=======
-config 
-	bool "Build in debug mode"
-	help
-	  Enable this option to build ATF with DEBUG=1.
-
 config BR2_TARGET_ARM_TRUSTED_FIRMWARE_IMAGES
 	string "Binary boot images"
 	default "*.bin"
@@ -120,5 +113,4 @@ config BR2_TARGET_ARM_TRUSTED_FIRMWARE_IMAGES
 	  Names of generated image files that are installed in the
 	  output images/ directory.
 
->>>>>>> e4d276c357... boot/arm-trusted-firmware: add pattern based image copy for ATF
 endif
