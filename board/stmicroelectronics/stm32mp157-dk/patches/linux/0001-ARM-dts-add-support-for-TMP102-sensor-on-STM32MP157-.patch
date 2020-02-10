@@ -1,0 +1,33 @@
+From ba20b16fbd464e1dd319f4a95ce8446bc5915519 Mon Sep 17 00:00:00 2001
+From: as77780 <as77780@yandex.ru>
+Date: Mon, 10 Feb 2020 03:17:25 -0800
+Subject: [PATCH] ARM: dts: add support for TMP102 sensor on STM32MP157 DK2
+
+Signed-off-by: as77780 <as77780@yandex.ru>
+---
+ arch/arm/boot/dts/stm32mp157c-dk2.dts | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/arch/arm/boot/dts/stm32mp157c-dk2.dts b/arch/arm/boot/dts/stm32mp157c-dk2.dts
+index 20a86f1b9abc..6fe6d8427e03 100644
+--- a/arch/arm/boot/dts/stm32mp157c-dk2.dts
++++ b/arch/arm/boot/dts/stm32mp157c-dk2.dts
+@@ -143,3 +143,15 @@
+ 		max-speed = <3000000>;
+ 	};
+ };
++&i2c5 {
++	status = "okay";
++	clock-frequency = <100000>;
++	pinctrl-names = "default", "sleep";
++	pinctrl-0 = <&i2c5_pins_a>;
++	pinctrl-1 = <&i2c5_pins_sleep_a>;
++        
++        tmp102@90 {
++		compatible = "ti,tmp102";
++		reg = <0x90>;
++	};
++};
+-- 
+2.17.1
+
