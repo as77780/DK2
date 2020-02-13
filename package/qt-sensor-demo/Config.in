@@ -1,0 +1,7 @@
+config BR2_PACKAGE_QT_SENSOR_DEMO
+        bool "qt-sensor-demo"
+        depends on BR2_PACKAGE_QT5
+        select BR2_PACKAGE_QT5BASE_WIDGETS
+        select BR2_PACKAGE_QT5CHARTS
+        help
+          This is the qt-sensor-demo application.

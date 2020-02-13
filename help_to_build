@@ -1,0 +1,7 @@
+make linux-dirclean очистка дир. Linux
+make linux-menuconfig  -    конфиг Linux ядра(создаст временный конфиг)
+make linux-update-defconfig - перенос настроек на постоянное ядро
+make linux-rebuild all - пересобрать Linux ядро
+make - rebuild SD Card image
+
+make savedefconfig 
